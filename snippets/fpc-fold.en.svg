@@ -1,0 +1,51 @@
+<svg class="axtp-diagram" viewBox="0 0 760 580" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematic of how the FPC cable is folded. The cable leaves J2 heading right, a 45-degree diagonal fold turns it downward, a 180-degree fold turns it back upward, and it then passes through the center-pole hole of the topmost switch — up and to the right of J2 — to reach the mount PCB on the front of the board. Colour shows which face of the cable is visible after each fold.">
+  <title>Folding and routing the FPC cable</title>
+  <g fill="none" stroke="currentColor" color="var(--md-default-fg-color)">
+    <!-- ================= legend ================= -->
+    <rect x="566" y="16" width="22" height="12" rx="2" fill="#4c6ef5" stroke="none"/>
+    <text x="596" y="27" fill="currentColor" font-size="13" stroke="none">FPC front face</text>
+    <rect x="566" y="38" width="22" height="12" rx="2" fill="#e8963c" stroke="none"/>
+    <text x="596" y="49" fill="currentColor" font-size="13" stroke="none">FPC back face</text>
+    <!-- ================= Panel A: how to fold, seen from the back of the PCB ================= -->
+    <text x="24" y="30" fill="currentColor" font-size="17" font-weight="700" stroke="none">Folding<tspan fill="var(--md-default-fg-color--light)" font-size="14" font-weight="400" dx="10">(PCB seen from behind)</tspan></text>
+    <rect x="60" y="60" width="300" height="320" rx="6" fill="none" stroke="var(--md-default-fg-color--lighter)" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <!-- J2 connector -->
+    <rect x="80" y="217" width="64" height="26" rx="2" fill="var(--md-code-bg-color)" stroke="currentColor" stroke-width="1.5"/>
+    <text x="112" y="263" fill="currentColor" font-size="13" text-anchor="middle" stroke="none">J2</text>
+    <!-- center-pole hole, up and to the right of J2 -->
+    <circle cx="324" cy="100" r="18" fill="var(--md-default-fg-color--lightest)" stroke="currentColor" stroke-width="1.5"/>
+    <!-- run 1: out of J2 heading right, front face up -->
+    <rect x="144" y="222" width="156" height="16" fill="#4c6ef5" stroke="none"/>
+    <!-- 45 deg diagonal fold: the corner triangle and the run going down now show the back face -->
+    <path d="M 300 222 L 316 238 L 316 350 L 300 350 Z" fill="#e8963c" stroke="none"/>
+    <!-- 180 deg fold back at the bottom -->
+    <path d="M 300 350 H 332 L 332 353 Q 316 368 300 353 Z" fill="#4c6ef5" stroke="none"/>
+    <!-- run 2: back up to the hole, front face up again; outlined so the crossing reads as an overlap -->
+    <rect x="316" y="118" width="16" height="232" fill="#4c6ef5" stroke="var(--md-default-bg-color)" stroke-width="3"/>
+    <!-- creases -->
+    <path d="M 296 218 L 320 242" stroke="var(--md-default-bg-color)" stroke-width="2.5" stroke-dasharray="5 4"/>
+    <path d="M 294 352 H 338" stroke="var(--md-default-bg-color)" stroke-width="2.5" stroke-dasharray="5 4"/>
+    <!-- callouts -->
+    <text x="376" y="96" fill="currentColor" font-size="13" stroke="none">3. Center-pole hole of the topmost switch</text>
+    <text x="376" y="116" fill="var(--md-default-fg-color--light)" font-size="12" stroke="none">up and to the right of J2 — route the cable through it</text>
+    <text x="376" y="226" fill="currentColor" font-size="13" stroke="none">1. A 45° diagonal fold turns it downward</text>
+    <text x="376" y="246" fill="var(--md-default-fg-color--light)" font-size="12" stroke="none">the direction changes by 90° and the visible face flips</text>
+    <text x="376" y="292" fill="var(--md-default-fg-color--light)" font-size="12" stroke="none">* The downward and upward runs overlap in reality</text>
+    <text x="376" y="310" fill="var(--md-default-fg-color--light)" font-size="12" stroke="none">  (drawn side by side here for clarity)</text>
+    <text x="376" y="356" fill="currentColor" font-size="13" stroke="none">2. Fold it back (180°) so it points up</text>
+    <text x="376" y="376" fill="var(--md-default-fg-color--light)" font-size="12" stroke="none">the face flips again, putting the contacts on the correct side</text>
+    <!-- ================= Panel B: cross section ================= -->
+    <text x="24" y="430" fill="currentColor" font-size="17" font-weight="700" stroke="none">Cross section<tspan fill="var(--md-default-fg-color--light)" font-size="14" font-weight="400" dx="10">(after the hole)</tspan></text>
+    <rect x="110" y="450" width="196" height="13" rx="2" fill="var(--md-default-fg-color--lightest)" stroke="currentColor" stroke-width="1.5"/>
+    <text x="196" y="444" fill="var(--md-default-fg-color--light)" font-size="13" text-anchor="middle" stroke="none">Mount PCB</text>
+    <rect x="250" y="463" width="56" height="16" rx="2" fill="var(--md-code-bg-color)" stroke="currentColor" stroke-width="1.5"/>
+    <text x="244" y="497" fill="var(--md-default-fg-color--light)" font-size="12" text-anchor="end" stroke="none">the connector sits at the board edge</text>
+    <rect x="80" y="516" width="216" height="14" rx="2" fill="var(--md-default-fg-color--lightest)" stroke="currentColor" stroke-width="1.5"/>
+    <rect x="340" y="516" width="172" height="14" rx="2" fill="var(--md-default-fg-color--lightest)" stroke="currentColor" stroke-width="1.5"/>
+    <text x="508" y="510" fill="var(--md-default-fg-color--light)" font-size="13" text-anchor="end" stroke="none">PCB (front)</text>
+    <text x="508" y="548" fill="var(--md-default-fg-color--light)" font-size="13" text-anchor="end" stroke="none">PCB (back)</text>
+    <path d="M 140 540 H 292 Q 318 540 318 514 V 484 Q 318 471 306 471 H 288"
+          stroke="#4c6ef5" stroke-width="5" stroke-linecap="round"/>
+    <text x="150" y="562" fill="var(--md-default-fg-color--light)" font-size="12" stroke="none">the FPC arriving along the back of the PCB (front face up)</text>
+  </g>
+</svg>

@@ -1,0 +1,142 @@
+site_name: Altair-X TrackPoint Mod
+site_description: ai03 Altair-X にトラックポイントを追加した Mod 版のビルドガイドと利用マニュアル
+site_author: Kazuki Shimizu
+site_url: https://kazubu.github.io/axtp-guide/
+
+repo_url: https://github.com/kazubu/axtp-guide
+repo_name: kazubu/axtp-guide
+edit_uri: edit/master/docs/
+
+copyright: Copyright &copy; 2026 Kazuki Shimizu
+
+theme:
+  name: material
+  language: ja
+  # favicon: assets/images/favicon.png  # TODO: favicon を用意したら有効化
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    # navigation.instant は mkdocs-static-i18n の言語スイッチャーと非互換なので使わない
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - content.action.edit
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - search.suggest
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: OS の設定に合わせる
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: ダークモードに切り替え
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: ライトモードに切り替え
+
+plugins:
+  - search
+  - glightbox:
+      loop: false
+      zoomable: true
+      draggable: false
+      caption_position: bottom
+  - i18n:
+      docs_structure: suffix
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: ja
+          name: 日本語
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+          site_name: Altair-X TrackPoint Mod
+          site_description: Build guide and user manual for the TrackPoint mod of the ai03 Altair-X
+          theme:
+            language: en
+          nav_translations:
+            はじめに: Introduction
+            ビルドガイド: Build Guide
+            部品リストと必要工具: Parts & Tools
+            基板の実装: PCB Assembly
+            トラックポイントの組み込み: TrackPoint Integration
+            ケースの組み立て: Case Assembly
+            ファームウェアの書き込み: Flashing Firmware
+            利用マニュアル: User Manual
+            基本操作とレイヤー: Basics & Layers
+            キーマップの変更: Customizing the Keymap
+            レイヤー状態の通知アプリ: Layer Status App
+            トラブルシュート: Troubleshooting
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/kazubu
+      name: GitHub
+
+nav:
+  - はじめに: index.md
+  - ビルドガイド:
+      - 部品リストと必要工具: build/01-bom.md
+      - 基板の実装: build/02-pcb.md
+      - トラックポイントの組み込み: build/03-trackpoint.md
+      - ケースの組み立て: build/04-assembly.md
+      - ファームウェアの書き込み: build/05-firmware.md
+  - 利用マニュアル:
+      - 基本操作とレイヤー: manual/usage.md
+      - キーマップの変更: manual/keymap.md
+      - レイヤー状態の通知アプリ: manual/status-app.md
+  - トラブルシュート: troubleshooting.md
+  - FAQ: faq.md

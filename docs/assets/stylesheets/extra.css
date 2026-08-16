@@ -1,0 +1,48 @@
+/* Altair-X TrackPoint Mod guide — theme tweaks */
+
+:root {
+  --axtp-image-border: rgba(0, 0, 0, 0.12);
+}
+
+[data-md-color-scheme="slate"] {
+  --axtp-image-border: rgba(255, 255, 255, 0.16);
+}
+
+/* Build photos: keep them contained and visually separated from the text */
+.md-typeset img,
+.md-typeset video {
+  border: 1px solid var(--axtp-image-border);
+  border-radius: 0.25rem;
+  max-width: 100%;
+}
+
+/* Figure captions */
+.md-typeset figure figcaption {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Checklists in the build guide read better with a bit more room */
+.md-typeset .task-list-item {
+  margin-bottom: 0.2rem;
+}
+
+/* Tables: don't let long TODO cells collapse the layout */
+.md-typeset table:not([class]) {
+  font-size: 0.75rem;
+}
+
+/* Inline SVG diagrams (snippets under snippets/) */
+.md-typeset .axtp-diagram {
+  display: block;
+  width: 100%;
+  max-width: 46rem;
+  height: auto;
+  margin: 1em auto;
+  font-family: var(--md-text-font-family);
+}
+
+/* Keyboard keys (pymdownx.keys) */
+.md-typeset kbd {
+  font-size: 0.85em;
+}
