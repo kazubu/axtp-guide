@@ -73,4 +73,4 @@ description: Frequently asked questions
 
 ??? question "Where do I report issues?"
 
-    [GitHub Issues](https://github.com/kazubu/axtp-guide/issues)
+    Please send me a message via booth.

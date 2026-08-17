@@ -34,7 +34,7 @@ description: VIA でのキーマップ変更と、ソースを編集する方法
 | --- | --- |
 | EEPROM への設定保存 | `CUSTOM(0)` |
 | EEPROM 設定初期化 | `CUSTOM(1)` |
-| EEPROM 設定表示（キー入力として出力されます） | `CUSTOM(2)` |
+| EEPROM 設定表示（HID CONSOLEに出力されます） | `CUSTOM(2)` |
 | ポインタ速度変更（押したあとに +/- を押して変更） | `CUSTOM(3)` |
 | Sniper Layer のポインタ速度変更（同上） | `CUSTOM(4)` |
 | スクロールバッファサイズ変更（同上） | `CUSTOM(5)` |

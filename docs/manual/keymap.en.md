@@ -37,7 +37,7 @@ Settings specific to this keyboard are changed with the keycodes below. Apart fr
 | --- | --- |
 | Save the settings to EEPROM | `CUSTOM(0)` |
 | Reset the EEPROM settings | `CUSTOM(1)` |
-| Print the EEPROM settings (typed out as keystrokes) | `CUSTOM(2)` |
+| Print the EEPROM settings (need to enable HID CONSOLE) | `CUSTOM(2)` |
 | Change the pointer speed (press, then +/- to adjust) | `CUSTOM(3)` |
 | Change the Sniper Layer pointer speed (same) | `CUSTOM(4)` |
 | Change the scroll buffer size (same) | `CUSTOM(5)` |

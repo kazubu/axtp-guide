@@ -69,4 +69,4 @@ description: よくある質問
 
 ??? question "質問や不具合はどこに報告すればよいですか？"
 
-    [GitHub Issues](https://github.com/kazubu/axtp-guide/issues) までお願いします。
+    boothのメッセージ機能でお問い合わせください。
